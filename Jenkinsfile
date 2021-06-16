@@ -25,7 +25,7 @@ pipeline {
         stage('Ansible Deploy') {
              
             steps {
-                     ansiblePlaybook installation: 'Ansible', inventory: 'hosts', playbook: 'deploy.yml'
+                     ansiblePlaybook disableHostKeyChecking: true, installation: 'Ansible', inventory: 'hosts', playbook: 'deploy.yml'
   
             }
         }

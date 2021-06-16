@@ -25,7 +25,7 @@ pipeline {
         stage('Ansible Deploy') {
              
             steps {
-                     sh "ansible-playbook -i hosts deploy.yml --user root"
+                     sh "ansible-playbook -i hosts deploy.yml"
   
             }
         }

@@ -1,5 +1,5 @@
 - hosts: all
-  gatherfacts: no
+  gather_facts: no
   tasks:
     - name: Deploy static website
       copy:

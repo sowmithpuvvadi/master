@@ -25,7 +25,7 @@ pipeline {
         stage('Ansible Deploy') {
              
             steps {
-                     ansiblePlaybook become: true, credentialsId: 'Ansible', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'hosts', playbook: 'deploy.yml'
+                     sh "ansible-playbook deploy.yml -i hosts --user root"
   
             }
         }

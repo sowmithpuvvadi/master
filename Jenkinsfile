@@ -26,7 +26,6 @@ pipeline {
              
             steps {
                 
-                  sh "cd /etc/ansible/"
                   sh "ansible-playbook -i hosts deploy.yml"
   
             }
